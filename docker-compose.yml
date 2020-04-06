@@ -1,0 +1,19 @@
+version: "3"
+services:
+  issues_app_api:
+    container_name: issues_app_api
+    build: 
+      context: ./issues_app
+    restart: always
+    ports:
+    - ${API_PORT:-8001}:8001
+
+  issues_app_front:
+    container_name: issues_app_front
+    build: 
+      context: ./issues_app_front
+    restart: always
+    ports:
+    - ${FRONT_PORT:-3000}:80
+    environment:
+    - API_PORT
