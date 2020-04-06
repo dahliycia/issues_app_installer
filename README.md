@@ -1,23 +1,25 @@
-#Cracker - Issue Tracker installer (and docs)
+# Cracker - Issue Tracker installer (and docs)
 
 Here you can find all information needed to install and run Cracker!
 
-###Prerequisites
+## Prerequisites
 
 You will need bash and Docker (& docker-compose)
 
-###Instalation
+## Instalation
 
 1. Clone this repo
 2. Get inside and run `install.sh`
 
 `install.sh` will clone the API and frontend repositories and run docker-compose to create your docker containers.
 
+By default, the API will run on `8001` and the frontend on `3000`.
+
 If you want to, you can specify the ports on which to run the containers. To do that, export the following variables to your environment before running install:
 - `API_PORT`
 - `FRONT_PORT`
 
-####Run outside of docker
+### Run outside of docker
 
 If you prefer to run the app without using Docker, you can just clone the frontend and api repos:
 
